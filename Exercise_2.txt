@@ -1,0 +1,14 @@
+//Theodore Ruth Java Chapter 11: Exercise 2
+2. A rewritten increment would look something like this:
+
+public void increment(double seconds) {
+    this.second += seconds;
+    if (this.second >= 60.0 ) {
+        this.second -= 60.0 * (this.second % 60.0);
+        this.minute += 1 * (this.second % 60.0);
+    }
+    if (this.minute >= 60 ) {
+        this.minute -= 60 * (this.minute % 60);
+        this.hour += 1 * (this.second % 60);
+    }
+}
